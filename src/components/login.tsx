@@ -16,7 +16,7 @@ export const LoginForm = ({ onSuccess }: LoginFormProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showResetPassword, setShowResetPassword] = useState(false);
-  const clientId = "403016110145-93uhro864uemksssrt5tj34q269v178c.apps.googleusercontent.com";
+  const clientId =process.env.CLIENTID || '';
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

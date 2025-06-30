@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3000/api', 
+  baseURL: process.env.URI || 'https://smartbiz-server.onrender.com', // כתובת ה־API שלך
   withCredentials: true, // אם את משתמשת בקוקיז/אימות
 });
 

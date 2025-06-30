@@ -157,7 +157,7 @@ const authSlice = createSlice({
         state.loading = true;
         state.error = null;
       })
-      .addCase(sendEmailVerification.fulfilled, (state, action) => {
+      .addCase(sendEmailVerification.fulfilled, (state) => {
         state.loading = false;
         state.error = null; // אין צורך לשמור את התגובה, רק להציג הודעה למשתמש
       })
